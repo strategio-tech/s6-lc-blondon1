@@ -18,7 +18,7 @@ public class LoanCalculator {
         int monthPay = amount;
         int remainder = 0;
         for (int i = 0;i < 3;i++){
-            remainder = (int) (monthPay - monthPay * 0.1);
+            remainder = monthPay - (int) ( monthPay * 0.1);
             monthPay = remainder;
         }
 
