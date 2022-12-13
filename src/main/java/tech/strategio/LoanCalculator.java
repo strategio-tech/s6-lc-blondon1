@@ -10,10 +10,19 @@ public class LoanCalculator {
      * 
      * @param ???
      * @return ???
+     *
+     * LoanCalculator.getRemainingAmountIn3Months(100000))
+     * expected:72900
      */
     static int getRemainingAmountIn3Months(int amount) {
-        // TODO: Rewrite this method
-        return -1;
+        int monthPay = amount;
+        int remainder = 0;
+        for (int i = 0;i < 3;i++){
+            remainder = monthPay - (int) ( monthPay * 0.1);
+            monthPay = remainder;
+        }
+
+        return remainder;
     }
 
     public static void main(String[] args) {
